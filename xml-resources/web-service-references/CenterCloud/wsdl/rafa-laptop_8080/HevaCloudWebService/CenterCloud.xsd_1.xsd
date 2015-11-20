@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://hsws.hevasoluciones.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://hsws.hevasoluciones.com/">
+
+<xs:element name="createNewCampain" type="tns:createNewCampain"/>
+
+<xs:element name="createNewCampainResponse" type="tns:createNewCampainResponse"/>
+
+<xs:element name="deleteCampain" type="tns:deleteCampain"/>
+
+<xs:element name="deleteCampainResponse" type="tns:deleteCampainResponse"/>
+
+<xs:element name="editCampain" type="tns:editCampain"/>
+
+<xs:element name="editCampainResponse" type="tns:editCampainResponse"/>
+
+<xs:element name="getAllBeaconsStatus" type="tns:getAllBeaconsStatus"/>
+
+<xs:element name="getAllBeaconsStatusResponse" type="tns:getAllBeaconsStatusResponse"/>
+
+<xs:element name="getAllTags" type="tns:getAllTags"/>
+
+<xs:element name="getAllTagsResponse" type="tns:getAllTagsResponse"/>
+
+<xs:element name="getBeacons" type="tns:getBeacons"/>
+
+<xs:element name="getBeaconsResponse" type="tns:getBeaconsResponse"/>
+
+<xs:element name="getCampains" type="tns:getCampains"/>
+
+<xs:element name="getCampainsResponse" type="tns:getCampainsResponse"/>
+
+<xs:element name="insertBeaconFistTime" type="tns:insertBeaconFistTime"/>
+
+<xs:element name="insertBeaconFistTimeResponse" type="tns:insertBeaconFistTimeResponse"/>
+
+<xs:element name="insertUserLike" type="tns:insertUserLike"/>
+
+<xs:element name="insertUserLikeResponse" type="tns:insertUserLikeResponse"/>
+
+<xs:element name="insertUserShare" type="tns:insertUserShare"/>
+
+<xs:element name="insertUserShareResponse" type="tns:insertUserShareResponse"/>
+
+<xs:element name="insertUserUseAppString" type="tns:insertUserUseAppString"/>
+
+<xs:element name="insertUserUseAppStringResponse" type="tns:insertUserUseAppStringResponse"/>
+
+<xs:element name="uniqueVisitorsforRegion" type="tns:uniqueVisitorsforRegion"/>
+
+<xs:element name="uniqueVisitorsforRegionResponse" type="tns:uniqueVisitorsforRegionResponse"/>
+
+<xs:element name="updateBeaconsInDb" type="tns:updateBeaconsInDb"/>
+
+<xs:element name="updateBeaconsInDbResponse" type="tns:updateBeaconsInDbResponse"/>
+
+<xs:element name="visitsforRegion" type="tns:visitsforRegion"/>
+
+<xs:element name="visitsforRegionResponse" type="tns:visitsforRegionResponse"/>
+
+<xs:complexType name="getBeacons">
+<xs:sequence>
+<xs:element name="appId" type="xs:string" minOccurs="0"/>
+<xs:element name="appToken" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBeaconsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:beacon" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="beacon">
+<xs:sequence>
+<xs:element name="battery_life_expectancy_in_days" type="xs:long"/>
+<xs:element name="color" type="xs:string" minOccurs="0"/>
+<xs:element name="icon" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+<xs:element name="mac" type="xs:string" minOccurs="0"/>
+<xs:element name="major" type="xs:long"/>
+<xs:element name="minor" type="xs:long"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="tags" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="uuid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editCampain">
+<xs:sequence>
+<xs:element name="idCampain" type="xs:int"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+<xs:element name="content" type="xs:string" minOccurs="0"/>
+<xs:element name="featuredImage" type="xs:string" minOccurs="0"/>
+<xs:element name="beacons" type="tns:beacon" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="tags" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editCampainResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertUserUseAppString">
+<xs:sequence>
+<xs:element name="idFb" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="fullname" type="xs:string" minOccurs="0"/>
+<xs:element name="gendre" type="xs:string" minOccurs="0"/>
+<xs:element name="urlPicture" type="xs:string" minOccurs="0"/>
+<xs:element name="brithdays" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertUserUseAppStringResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCampain">
+<xs:sequence>
+<xs:element name="idCampain" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCampainResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllTags">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllTagsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertBeaconFistTime">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="insertBeaconFistTimeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllBeaconsStatus">
+<xs:sequence>
+<xs:element name="appId" type="xs:string" minOccurs="0"/>
+<xs:element name="appToken" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllBeaconsStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:beaconStatus" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="beaconStatus">
+<xs:sequence>
+<xs:element name="countBeaconAlert" type="xs:int"/>
+<xs:element name="countBeaconOff" type="xs:int"/>
+<xs:element name="countBeaconOn" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCampains">
+<xs:sequence>
+<xs:element name="Beacons" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCampainsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:campains" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="campains">
+<xs:sequence>
+<xs:element name="beacons" type="tns:beacon" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="tags" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="content" type="xs:string" minOccurs="0"/>
+<xs:element name="featuredImage" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uniqueVisitorsforRegion">
+<xs:sequence>
+<xs:element name="appId" type="xs:string" minOccurs="0"/>
+<xs:element name="appToken" type="xs:string" minOccurs="0"/>
+<xs:element name="uuid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uniqueVisitorsforRegionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:visitsRegionSpec" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="visitsRegionSpec">
+<xs:sequence>
+<xs:element name="visits" type="tns:visits" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="region" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="visits">
+<xs:sequence>
+<xs:element name="app_in_background_visits" type="xs:long"/>
+<xs:element name="app_in_foreground_visits" type="xs:long"/>
+<xs:element name="time" type="xs:string" minOccurs="0"/>
+<xs:element name="total_visits" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="visitsforRegion">
+<xs:sequence>
+<xs:element name="appId" type="xs:string" minOccurs="0"/>
+<xs:element name="appToken" type="xs:string" minOccurs="0"/>
+<xs:element name="uuid" type="xs:string" minOccurs="0"/>
+<xs:element name="major" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="visitsforRegionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:visitsRegionSpec" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertUserShare">
+<xs:sequence>
+<xs:element name="idCampain" type="xs:int"/>
+<xs:element name="userEmail" type="xs:string" minOccurs="0"/>
+<xs:element name="idUser" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertUserShareResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateBeaconsInDb">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateBeaconsInDbResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertUserLike">
+<xs:sequence>
+<xs:element name="idCampain" type="xs:int"/>
+<xs:element name="userEmail" type="xs:string" minOccurs="0"/>
+<xs:element name="idUser" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertUserLikeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNewCampain">
+<xs:sequence>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+<xs:element name="content" type="xs:string" minOccurs="0"/>
+<xs:element name="featuredImage" type="xs:string" minOccurs="0"/>
+<xs:element name="beacons" type="tns:beacon" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="tags" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNewCampainResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

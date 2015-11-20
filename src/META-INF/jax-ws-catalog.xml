@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://rafa-laptop:8080/HevaCloudWebService/CenterCloud?wsdl" uri="wsdl/rafa-laptop_8080/HevaCloudWebService/CenterCloud.wsdl"/>
+    <system systemId="http://rafa-laptop:8080/HevaCloudWebService/CenterCloud?xsd=1" uri="wsdl/rafa-laptop_8080/HevaCloudWebService/CenterCloud.xsd_1.xsd"/>
+    <system systemId="http://192.168.1.234:8083/HevaCloudWebService/CenterCloud?wsdl" uri="wsdl/192.168.1.234_8083/HevaCloudWebService/CenterCloud.wsdl"/>
+    <system systemId="http://192.168.1.234:8083/HevaCloudWebService/CenterCloud?xsd=1" uri="wsdl/192.168.1.234_8083/HevaCloudWebService/CenterCloud.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/HevaCloudWebService/CenterCloud?wsdl" uri="wsdl/localhost_8080/HevaCloudWebService/CenterCloud.wsdl"/>
+    <system systemId="http://localhost:8080/HevaCloudWebService/CenterCloud?xsd=1" uri="wsdl/localhost_8080/HevaCloudWebService/CenterCloud.xsd_1.xsd"/>
+</catalog>
